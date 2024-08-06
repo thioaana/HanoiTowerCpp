@@ -1,9 +1,11 @@
 #include "Cube.h"
 
+using namespace uiuc;
+
 Cube::Cube(double l){
-    length = l;
+    this->length = l;
 }
 
 double Cube::getLength() const{
-    return length;
+    return this->length;
 }

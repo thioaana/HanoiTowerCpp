@@ -1,5 +1,6 @@
 #pragma once
 
+namespace uiuc{
     class Cube{
         private:
             double length;
@@ -8,3 +9,4 @@
             Cube(double l);
             double getLength() const;
     };
+}

@@ -1,15 +1,18 @@
 #pragma once
 #include "Cube.h"
+#include <vector>
+#include <iostream>
+
+using namespace uiuc;
 
 class Stack{
     private:
         std::vector<Cube> cubes;
 
     public :
-        Stack();
-        void push_back(const Cube & cube);
+        void stackPushBack(const Cube & cube);
         Cube removeTop();
         Cube & peekTop();
-        unsigned size() const;
-        friend std::ostream& operator<<(std::ostream & os, const Stack & stack);
+        unsigned stackSize() const;
+        friend std::ostream& operator << (std::ostream & os, const Stack & stack);
 };

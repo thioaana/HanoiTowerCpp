@@ -1,23 +1,29 @@
 #include "Stack.h"
 
-Stack::Stack(){
-    Cube c1(4);
-    Cube c2(3);
-    Cube c3(2);
-    Cube c4(1);
+using namespace uiuc;
+using namespace std;
+
+void Stack::stackPushBack(const Cube &cube){
+    this->cubes.push_back(cube);
+}
+
+Cube Stack::removeTop(){
+    Cube c = this->peekTop();
+    this->cubes.pop_back();
+    return c;
+}
+
+Cube &Stack::peekTop(){
+    return this->cubes.back();
+}
+
+unsigned Stack::stackSize() const {
+    return this->cubes.size();
+}
+
+std::ostream &operator<<(std::ostream & os, const Stack & stack){
+    for (int i=0; i<stack.cubes.size(); i++){
+        os << stack.cubes[i].getLength() << " ";
     }
-
-}
-
-void Stack::push_back(const Cube &cube)
-{
-}
-
-Cube &Stack::peekTop()
-{
-    // TODO: insert return statement here
-}
-
-unsigned Stack::size() const{
-    return this.cubes.size();
+    return os;
 }
