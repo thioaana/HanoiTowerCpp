@@ -32,7 +32,7 @@ void Game::solve(){
         cout << *this << endl;
 
         this->legalMove(1, 2);
-        cout << *this << endl;
+        cout << *this ;
         cout << "----------------" << endl;
     }    
 }
